@@ -26,16 +26,15 @@
 }
 
 #pragma mark - Menu items
-
-static const unichar keyEquivalentUnichar = NSDownArrowFunctionKey;
+static NSString * const gotoSpecKeyEquivalent = @"t";
 
 - (NSMenuItem *)_openSpecOrImplInAdjacentEditorItem {
     NSMenuItem *item = [[[NSMenuItem alloc] init] autorelease];
     item.title = @"Open Spec/Impl in Adjacent Editor";
     item.target = self;
     item.action = @selector(openAlternateInAdjacentEditor:);
-    item.keyEquivalent = [NSString stringWithCharacters:&keyEquivalentUnichar length:1];
-    item.keyEquivalentModifierMask = NSShiftKeyMask | NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask;
+    item.keyEquivalent = gotoSpecKeyEquivalent;
+    item.keyEquivalentModifierMask = NSAlternateKeyMask | NSCommandKeyMask;
     return item;
 }
 
@@ -44,8 +43,8 @@ static const unichar keyEquivalentUnichar = NSDownArrowFunctionKey;
     item.title = @"Alternate Between Spec";
     item.target = self;
     item.action = @selector(alternateBetweenSpec:);
-    item.keyEquivalent = [NSString stringWithCharacters:&keyEquivalentUnichar length:1];
-    item.keyEquivalentModifierMask = NSShiftKeyMask | NSControlKeyMask | NSCommandKeyMask;
+    item.keyEquivalent = gotoSpecKeyEquivalent;
+    item.keyEquivalentModifierMask = NSShiftKeyMask | NSCommandKeyMask;
     return item;
 }
 @end

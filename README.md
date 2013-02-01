@@ -24,11 +24,11 @@ cursor and use a shortcut instead.
     Insert `#import` declaration for a symbol under the cursor  
     (Edit > Insert Import)
 
-    `Shift + Ctrl + Cmd + DownArrow`  
+    `Shift + Cmd + T`  
     Alternate between Spec and implementation in current editor  
     (Navigate > Alternate Between Spec)
 
-    `Shift + Ctrl + Alt + Cmd + DownArrow`  
+    `Alt + Cmd + T`  
     Open alternate (spec or implementation) in adjacent editor  
     (Navigate > Open Spec/Impl in Adjacent Editor)
 
